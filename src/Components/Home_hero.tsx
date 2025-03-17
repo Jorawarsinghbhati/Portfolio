@@ -36,7 +36,7 @@ export default function Home() {
         {/* Right Side - Circular Image */}
         <div className="w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
           <div className="w-56 h-56 md:w-72 md:h-72 bg-gray-400 rounded-full overflow-hidden">
-          <Image width={288} height={288}  src="/Jorawar_singh.jpeg" alt="Medicine Store" className="rounded-full object-cover w-full h-full" />
+          <Image width={288} height={288}  src="/jorawar_singh_bhati.jpeg" alt="Medicine Store" className="rounded-full object-cover w-full h-full" />
           </div>
         </div>
 
