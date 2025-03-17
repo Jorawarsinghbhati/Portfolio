@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="mt-35 h-[220vh] md:h-[100vh] lg:h-[90vh] md:mb-35">
+    <div className="mt-35 h-[300vh] md:h-[100vh] lg:h-[90vh] md:mb-35">
         <div >
             <div>
                 <BentoGridDemo/>
