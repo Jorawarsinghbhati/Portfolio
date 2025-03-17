@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <WavyBackground className="max-w-7xl mx-auto flex flex-row items-center justify-center h-full sm:w-full">
+    <WavyBackground className="max-w-7xl mx-auto flex flex-row items-center justify-center h-full sm:w-full mt-14">
       <section className="flex flex-col sm:flex-row sm:items-center sm:justify-center justify-end w-full min-h-screen px-8 sm:px-16 lg:px-32">
         
         {/* Left Side - Text */}
