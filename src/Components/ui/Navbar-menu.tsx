@@ -1,7 +1,7 @@
 "use client";
-import React, { PropsWithChildren } from "react";
-import { motion } from "framer-motion";
-import Link, { LinkProps } from "next/link";
+import React, { useState } from "react";
+import { motion } from "motion/react";
+import Link from "next/link";
 import Image from "next/image";
 
 const transition = {
@@ -13,14 +13,23 @@ const transition = {
   restSpeed: 0.001,
 };
 
-export const MenuItem: React.FC<{
-  setActive: (item: string) => void;
+export const MenuItem = ({
+  setActive,
+  active,
+  item,
+  children,
+}: {
+  setActive: (item: string | null) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
-}> = ({ setActive, active, item, children }) => {
+}) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
+    <div
+      onMouseEnter={() => setActive(item)}
+      onClick={() => setActive(null)} // Hide dropdown on click
+      className="relative"
+    >
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
@@ -50,13 +59,16 @@ export const MenuItem: React.FC<{
   );
 };
 
-export const Menu: React.FC<{
+export const Menu = ({
+  setActive,
+  children,
+}: {
   setActive: (item: string | null) => void;
   children: React.ReactNode;
-}> = ({ setActive, children }) => {
+}) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)}
+      onMouseLeave={() => setActive(null)} // Hide dropdown when mouse leaves menu
       className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6"
     >
       {children}
@@ -64,12 +76,17 @@ export const Menu: React.FC<{
   );
 };
 
-export const ProductItem: React.FC<{
+export const ProductItem = ({
+  title,
+  description,
+  href,
+  src,
+}: {
   title: string;
   description: string;
   href: string;
   src: string;
-}> = ({ title, description, href, src }) => {
+}) => {
   return (
     <Link href={href} className="flex space-x-2">
       <Image
@@ -91,10 +108,7 @@ export const ProductItem: React.FC<{
   );
 };
 
-export const HoveredLink: React.FC<PropsWithChildren<LinkProps>> = ({
-  children,
-  ...rest
-}) => {
+export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
@@ -104,3 +118,4 @@ export const HoveredLink: React.FC<PropsWithChildren<LinkProps>> = ({
     </Link>
   );
 };
+
