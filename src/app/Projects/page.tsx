@@ -1,9 +1,3 @@
-import Link from "next/link";
-
 export default function HomePage() {
-  return (
-  <>
-  </>
-      
-  );
+  return null; // Explicitly return null if no content
 }

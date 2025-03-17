@@ -1,12 +1,9 @@
-import Link from "next/link";
-import HomePage from "../Components/Home_hero";
+import HomeHero from "../Components/Home_hero"; // Renamed import for clarity
 
-export default function HomePagei() {
+export default function HomePage() {  // Renamed component to avoid conflict
   return (
-  
-  <div className="home">
-    <HomePage/>
-  </div>
-      
+    <div className="home">
+      <HomeHero /> {/* Using the corrected component */}
+    </div>
   );
 }

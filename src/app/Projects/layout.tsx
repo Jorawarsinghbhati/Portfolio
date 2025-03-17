@@ -1,8 +1,9 @@
+
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
+
 import BentoGridDemo from "@/Components/Projects";
 
-const inter = Inter({ subsets: ["latin"] }); // Correct way to define font
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,13 +12,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <div className={inter.className}>
-      <div className="mt-35 h-[220vh] md:h-[100vh] lg:h-[90vh] md:mb-35">
-        <BentoGridDemo />
-      </div>
-      {children}
+    <div className="mt-35 h-[220vh] md:h-[100vh] lg:h-[90vh] md:mb-35">
+        <div >
+            <div>
+                <BentoGridDemo/>
+            </div>
+            
+        </div>
+        {children}
     </div>
+
   );
 }

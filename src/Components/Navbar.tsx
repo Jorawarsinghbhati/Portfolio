@@ -1,42 +1,8 @@
-// "use client";
-// import React, { useState } from "react";
-// import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/Navbar-menu";
-// import { cn } from "../lib/utils";
-// import Link from "next/link";
-
-
-
-// function Navbar({ className }: { className?: string }) {
-//     const [active, setActive] = useState<string | null>(null);
-
-//     return (
-//         <div className="relative w-full flex justify-center"> {/* Ensures center alignment */}
-//             <div className="fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 text-center bg-black/80 px-4 py-2 rounded-full">
-//                 <Menu setActive={setActive}>
-//                     <HoveredLink href="/">
-//                     <MenuItem setActive={setActive} active={active} item="Home" />
-//                     </HoveredLink>
-//                     <HoveredLink href="/Projects"> <MenuItem setActive={setActive} active={active} item="Projects" >
-//                     </MenuItem>
-//                     </HoveredLink>
-//                     <HoveredLink href="/Skills">
-//                     <MenuItem setActive={setActive} active={active} item="Skills"/>
-//                     </HoveredLink>
-//                     <HoveredLink href="/Details">
-//                     <MenuItem setActive={setActive} active={active} item="Details"/>
-//                     </HoveredLink>
-//                 </Menu>
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default Navbar;
 "use client";
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem } from "./ui/Navbar-menu";
 
-function Navbar({ className }: { className?: string }) {
+function Navbar() {
     const [active, setActive] = useState<string | null>(null);
 
     return (

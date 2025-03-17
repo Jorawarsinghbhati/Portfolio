@@ -1,9 +1,4 @@
-import Link from "next/link";
-
 export default function HomePagei() {
-  return (
-  <>
-  </>
-      
-  );
-}
+    return null; // Explicitly returning null for clarity
+  }
+  

@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function BentoGridDemo() {
   return (
-    <div className="flex flex-col items-center mt-24">
+    <div className="flex flex-col items-center mt-24 mb-7">
       <BentoGrid className="max-w-4xl mx-auto">
         {items.map((item, i) => (
           <BentoGridItem
